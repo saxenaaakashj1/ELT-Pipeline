@@ -7,8 +7,7 @@ from colorama import Fore, Style, init
 import pandas as pd
 from mysql.connector.connection import MySQLConnection
 
-# Local
-
+# Local modules
 from config import get_credentials
 from destination import connect_destination
 from source import connect_source
