@@ -1,0 +1,4 @@
+colorama
+pandas
+mysql-connector-python
+tqdm

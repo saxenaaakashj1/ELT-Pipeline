@@ -1,0 +1,15 @@
+{
+  "[python]": {
+    "editor.rulers": [72, 79]
+  },
+  "cSpell.words": [
+    "autoflake",
+    "colorama",
+    "executemany",
+    "isort",
+    "TINYINT",
+    "tqdm",
+    "upserts"
+  ],
+  "files.autoSave": "onFocusChange"
+}
