@@ -1,6 +1,6 @@
 # 🚀 ELT Data Pipeline — Extract, Load, and Transform
 
-![Pipeline](banner.png)
+!Pipeline](Project/banner.png)
 
 A robust and user-friendly **CLI-based** CSV-to-MySQL pipeline tool that:
 
