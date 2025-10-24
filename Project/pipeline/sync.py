@@ -30,7 +30,8 @@ def sync_data(source: pd.DataFrame, destination: MySQLConnection, file: str) -> 
         destination (MySQLConnection): Active MySQL connection object.
         file (str): Source CSV file name (used to derive table name).
     """
-    table_name: str = sanitize_table_name(os.path.basename(file).split(".")[0])
+    file_name = os.path.basename(file)
+    table_name: str = sanitize_table_name(file_name.split(".")[0])
     primary_key: Optional[str] = infer_primary_key(source)
     if primary_key:
         primary_key = sanitize_column_name(primary_key)
@@ -38,9 +39,10 @@ def sync_data(source: pd.DataFrame, destination: MySQLConnection, file: str) -> 
         source, table_name, primary_key
     )
 
+
     print(
         f"\n{Fore.BLUE}[Note]{Fore.MAGENTA} 🛑 By default, the data from "
-        f"{Fore.CYAN}{file}{Style.RESET_ALL} {Fore.MAGENTA}will be loaded "
+        f"{Fore.CYAN}{file_name}{Style.RESET_ALL} {Fore.MAGENTA}will be loaded "
         f"into the table {Fore.CYAN}'{table_name}'{Style.RESET_ALL}"
         f"{Fore.MAGENTA}.Please ensure that no other table in your database "
         "has the same name to avoid conflicts or data overwriting.\n"
