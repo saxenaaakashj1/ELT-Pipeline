@@ -23,7 +23,7 @@ def display_pipeline_banner() -> None:
            |  CSV    |           |   Data    |          |    (Final Load)    |
            +---------+           +-----------+          +--------------------+
                 |  📁                  |  🔄                     🗄️ |
-                +----------------------+-------------------------+
+                +----------------------+-----------------------------+
                                  Data Pipeline
     """
     )
@@ -35,7 +35,7 @@ def display_pipeline_banner() -> None:
     print(
         f"{Style.DIM}{get_time_stamp()}{Style.RESET_ALL} "
         f"{Fore.YELLOW}{Style.BRIGHT}[📁 Step 1/5]{Style.RESET_ALL} "
-        f"{Fore.YELLOW}🛠️  Initializing data pipeline..."
+        f"{Fore.YELLOW}🛠️ Initializing data pipeline..."
     )
     display_pipeline_progress("Preparing pipeline environment 🔄", 3)
     print("\n")

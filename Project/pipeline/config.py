@@ -32,17 +32,17 @@ def get_credentials() -> dict[str, str]:
         "port": input("🔌 Port (default '3306'): ").strip() or "3306",
         "user": input("👤 User: ").strip(),
         "password": getpass.getpass("🔒 Password (hidden): ").strip(),
-        "database": input("🛢️  Database: ").strip(),
+        "database": input("🛢️Database: ").strip(),
     }
 
     print(
         f"\n{Style.DIM}{get_time_stamp()}{Style.RESET_ALL} "
-        f"{Fore.YELLOW}Running basic credential validation 🛡️ ...\n"
+        f"{Fore.YELLOW}Running basic credential validation 🛡️...\n"
     )
     try:
         display_pipeline_progress("🔎 Validating credentials 🔄", 3)
         validate_credentials(config)
-        print(f"\n{Fore.GREEN}Basic credential validation successful. ✅")
+        print(f"\n{Fore.GREEN}Basic credential validation successful. ✅ ")
     except ValueError as validation_error:
         sys.exit(
             f"\n\n{validation_error}\n{Fore.YELLOW}🔴 Aborting pipeline.\n"

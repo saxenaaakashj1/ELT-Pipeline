@@ -56,7 +56,7 @@ def connect_source(file: str) -> pd.DataFrame:
         dataframe: pd.DataFrame = pd.read_csv(file)
         print(
             f"\n{Fore.GREEN}File {Fore.CYAN}'{file_name}' {Fore.GREEN}successfully "
-            f"validated and loaded into the memory. ✅\n"
+            f"validated and loaded into the memory. ✅ \n"
         )
     except (
         FileNotFoundError,

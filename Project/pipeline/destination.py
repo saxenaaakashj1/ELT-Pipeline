@@ -40,12 +40,12 @@ def connect_destination(config: dict[str, str]) -> Optional[MySQLConnection]:
         cnx = cast(MySQLConnection, mysql.connector.connect(**config))
         if cnx and cnx.is_connected():
             print(
-                f"\n{Fore.GREEN}🗄️  Successfully connected to MySQL server at "
-                f"{Style.BRIGHT}{config['host']}:{config['port']}. ✅"
+                f"\n{Fore.GREEN}🗄️ Successfully connected to MySQL server at "
+                f"{Style.BRIGHT}{config['host']}:{config['port']}. ✅ "
             )
         print(
             f"\n{Style.DIM}{get_time_stamp()}{Style.RESET_ALL} "
-            f"{Fore.YELLOW}🛢️  Preparing database environment..."
+            f"{Fore.YELLOW}🛢️Preparing database environment..."
         )
         if database:
             display_pipeline_progress(
@@ -56,9 +56,9 @@ def connect_destination(config: dict[str, str]) -> Optional[MySQLConnection]:
             try:
                 cnx.database = database
                 print(
-                    f"\n{Fore.GREEN}🛢️  Successfully connected to the "
+                    f"\n{Fore.GREEN}🛢️Successfully connected to the "
                     f"{Fore.CYAN}'{database}'{Fore.GREEN} "
-                    f"database. ✅"
+                    f"database. ✅ "
                 )
             except mysql.connector.Error as db_error:
                 handle_mysql_errors(db_error, is_db_error=True)

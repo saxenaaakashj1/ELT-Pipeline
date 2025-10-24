@@ -58,4 +58,4 @@ def display_erd(dataframe: pd.DataFrame, file: str) -> None:
             f"{dtype.ljust(col_widths[headers[1]])}"
         )
 
-    print(f"\n{Fore.GREEN}Schema fetched successfully. ✅\n")
+    print(f"\n{Fore.GREEN}Schema fetched successfully. ✅ \n")

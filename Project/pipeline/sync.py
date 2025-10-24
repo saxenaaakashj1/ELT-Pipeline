@@ -59,7 +59,7 @@ def sync_data(source: pd.DataFrame, destination: MySQLConnection, file: str) -> 
             cursor.execute(create_table_query)
             print(
                 f"{Fore.GREEN}Table {Fore.CYAN}'{table_name}'{Style.RESET_ALL}"
-                f" {Fore.GREEN}is ready for data synchronization. ✅\n"
+                f" {Fore.GREEN}is ready for data synchronization. ✅ \n"
             )
 
             # Synchronize data
@@ -76,7 +76,7 @@ def sync_data(source: pd.DataFrame, destination: MySQLConnection, file: str) -> 
             perform_soft_delete(cursor, source, table_name, primary_key)
 
             destination.commit()
-            print(f"{Fore.GREEN}\nSync completed successfully. ✅")
+            print(f"{Fore.GREEN}\nSync completed successfully. ✅ ")
             print(
                 f"\n{Fore.BLUE}📊 Load Summary: {Style.RESET_ALL}"
                 f"[{Fore.YELLOW}Table {Fore.CYAN}'{table_name}' "

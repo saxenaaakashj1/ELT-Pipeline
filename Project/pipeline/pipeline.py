@@ -55,7 +55,7 @@ def main(file: str) -> None:
     # Step 3: Establish connection to the MySQL server
     print(
         f"{Style.DIM}{get_time_stamp()}{Style.RESET_ALL} "
-        f"{Fore.YELLOW}{Style.BRIGHT}[🗄️  Step 4/5]{Style.RESET_ALL} "
+        f"{Fore.YELLOW}{Style.BRIGHT}[🗄️ Step 4/5]{Style.RESET_ALL} "
         f"{Fore.YELLOW}🔗 Attempting to connect to the MySQL server..."
     )
     destination: Optional[MySQLConnection] = connect_destination(config)
@@ -70,7 +70,7 @@ def main(file: str) -> None:
         print(
             f"\n{Style.DIM}{get_time_stamp()}{Style.RESET_ALL} "
             f"{Fore.YELLOW}{Style.BRIGHT}[🚀 Step 5/5]{Style.RESET_ALL} "
-            f"{Fore.YELLOW}Initiating data sync from 📁 CSV source to 🛢️  "
+            f"{Fore.YELLOW}Initiating data sync from 📁 CSV source to 🛢️ "
             "MySQL database..."
         )
         # Step 4: Begin data synchronization from CSV to MySQL database
@@ -83,7 +83,7 @@ def main(file: str) -> None:
         # Step 5: Close the MySQL connection
         destination.close()
         print(
-            f"{Fore.GREEN}🛢️  Database connection has been safely closed. "
+            f"{Fore.GREEN}🛢️ Database connection has been safely closed. "
             f"\n{Fore.MAGENTA}🏁 Pipeline execution completed successfully. "
             f"Thank you for using the Data Pipeline Tool! 🚀.\n"
         )
